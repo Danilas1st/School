@@ -1,0 +1,46 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include flex-center;
+	display: flex;
+	align-items: center;
+	z-index: 1;
+}
+.section_in {
+}
+.header_main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header_logo {
+}
+.header_menu {
+	ul {
+		display: flex;
+		align-items: center;
+	}
+	li {
+		&:not(:last-child) {
+			margin-right: 7rem;
+		}
+	}
+	a {
+		color: $white;
+	}
+}
+.header_phone {
+	a {
+		display: flex;
+		color: $white;
+	}
+}
+.header_phone_icon {
+	margin-right: 1.5rem;
+	width: 1.5rem;
+	height: 2.3rem;
+}
+.burger_trigger {
+}

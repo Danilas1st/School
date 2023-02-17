@@ -1,0 +1,171 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero
+		.section_in
+			.hero_main_w 
+				.hero_top 
+					.hero_txt 
+						h1 Комплексное оснащение образовательных учреждений
+						p Подберем и поставим оборудование в детские сады, школы, колледжи, училища, ВУЗы и другие образовательные учреждения.
+					.hero_top_btn
+						button(type="button") Оставить заявку
+				.hero_bottom 
+					ul 
+						li 
+							.bottom_img 
+								img(src="i/icons/clock.png", alt="")
+							.bottom_txt 
+								p 5 лет на рынке
+						li 
+							.bottom_img 
+								img(src="i/icons/bag.png", alt="")
+							.bottom_txt 
+								p Работа с гос. заказами
+						li
+							.bottom_img 
+								img(src="i/icons/file.png", alt="")
+							.bottom_txt 
+								p Сбор КП для аукциона и подготовка ТЗ
+						li 
+							.bottom_img 
+								img(src="i/icons/human.png", alt="")
+							.bottom_txt 
+								p Опытные менеджеры
+						li 
+							.bottom_img 
+								img(src="i/icons/money.png", alt="")
+							.bottom_txt 
+								p Выгодная стоимость
+						li 
+							.bottom_img 
+								img(src="i/icons/ok.png", alt="")
+							.bottom_txt 
+								p 80% выигранных аукционов
+	section.services 
+		.section_in 
+			.services_main
+				.services_head 
+					h2 Наши услуги
+				.services_info 
+					ul 
+						li
+							.services_info_img 
+								img(src="i/services/services1.png", alt="")
+							.services_info_txt 
+								h3 Комплексное оснащение
+								p Поможем подобрать необходимое оборудование.
+						li
+							.services_info_img 
+								img(src="i/services/services2.png", alt="")
+							.services_info_txt 
+								h3 Напишем ТЗ по 44 ФЗ и 223 ФЗ
+								p Напишем грамотное техническое задание согласно действующим законам.
+						li
+							.services_info_img 
+								img(src="i/services/services3.png", alt="")
+							.services_info_txt 
+								h3 Участие в торгах
+								p Примем участие в коммерческих и государственных тендерах.
+						li
+							.services_info_img 
+								img(src="i/services/services4.png", alt="")
+							.services_info_txt 
+								h3 Национальные проекты
+								p “Кванториум”,  “Точка роста”, “Современная школа”, “Демография” и др.
+						li
+							.services_info_img 
+								img(src="i/services/services5.png", alt="")
+							.services_info_txt 
+								h3 Прямые поставки из Китая
+								p За счет прямых поставок из Китая, мы предоставляем выгодные условия.
+						li 
+							.services_btn 
+								button(type="button")
+									h3 Оставьте заявку
+									p Мы свяжемся с вами в ближайшее время и обсудим детали
+									img(src="i/icons/arrow.png", alt="")
+	section.project 
+		.section_in 
+			.project_head 
+				h2 Наши проекты
+				.project_slider_nav 
+						.project_slider_btn_prewios 
+							button(type="button")
+								img(src="i/icons/arrowprewios.png", alt="")
+						.project_slider_btn_next 
+							button(type="button")
+								img(src="i/icons/arrownext.png", alt="")
+			.project_slider_w
+				.project_slider.swiper 
+					.swiper-wrapper
+						-for(i = 0; i < 15; i++)
+							.swiper-slide 
+								.project_slide
+									a(href="i/project/project1.png")
+										img(src="i/project/project1.png", alt="")
+									.project_slide_txt 
+										h3 Название проекта
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+	section.company
+		.section_in 
+			.company_main
+				.company_left 
+					img(src="i/children.png", alt="")
+				.company_right 
+					.company_right_txt
+						h2 О компании
+						p Наша компания специализируется на оснащении детских садов, школ, ВУЗов и объектов социально - культурного, спортивно-оздоровительного и общего назначения. 
+						p Работая по всей территории страны, мы обеспечиваем поставку технологического оборудования, специализированной мебели, технического инвентаря, расходного материала. 
+						p Исполнено более 80 государственных контрактов по всей стране.
+					.company_right_btn 
+						button(type="button") Оставить заявку
+	section.connection
+		.section_in
+			.connection_main 
+				.connection_left
+					.connection_left_txt 
+						h2 Свяжитесь с нами
+						p Оставьте заявку или свяжитесь с нами удобным для вас способом!
+					.connection_left_info 
+						ul
+							li
+								.connection_phone 
+									a(href="#")
+										.connection_phone_icon 
+											img(src="i/icons/call.png", alt="")
+										p 8 903 306 01 01
+							li 
+								.connection_mail 
+									a(href="#")
+										.connection_mail_icon 
+											img(src="i/icons/mail.png", alt="")
+										p tandem-116@mail.ru
+						.connection_addres 
+							.connection_addres_icon 
+								img(src="i/icons/mapmark.png", alt="")
+							p Адрес______________________
+				.connection_right 
+					form.connection_form
+						ul 
+							li
+								.connection_form_input
+									input(type="text" placeholder="Ваше имя")
+							li
+								.connection_form_input
+									input(type="tel" placeholder="Ваш телефон")
+						.connection_form_input
+							input(type="text" placeholder="Ваше сообщение")
+						ul 
+							li
+								.connection_form_btn 
+									button(type="submit") Отправить
+							li
+								.connection_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+
+	
