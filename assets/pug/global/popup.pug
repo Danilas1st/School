@@ -1,0 +1,54 @@
+.popup.popup_submit(data-id="form")
+	.popup_form_bg.close_popups.remove
+	.popup_form_w
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_form_head 
+			h3 Свяжитесь с нами
+			p Оставьте заявку или свяжитесь с нами удобным для вас способом!
+		form.popup_form
+			.popup_form_input
+				input(type="text" placeholder="Ваше имя")
+			.popup_form_input
+				input(type="tel" placeholder="Ваш телефон")
+			.popup_form_input_message
+				input(type="text" placeholder="Ваше сообщение")
+			.popup_form_btn 
+				button(type="submit") Отправить
+		.popup_policy!='Отправляя форму, вы соглашаетесь с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					img(src="i/logo.png", alt="")
+		.popup_menu 
+			ul 
+				li 
+					a(href="#") Услуги
+				li 
+					a(href="#") Проекты
+				li 
+					a(href="#") О нас
+				li 
+					a(href="#") Контакты
+		.popup_info
+			.popup_social 
+				.popup_tg
+					a(href="#")
+						img(src="i/icons/telegram.png", alt="") 
+				.popup_wh 
+					a(href="#")
+						img(src="i/icons/whatsapp.png", alt="")
+			.popup_tel 
+				a(href="#")
+					p 8 903 306 01 01

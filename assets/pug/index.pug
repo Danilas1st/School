@@ -10,7 +10,7 @@ block content_block
 					.hero_txt 
 						h1 Комплексное оснащение образовательных учреждений
 						p Подберем и поставим оборудование в детские сады, школы, колледжи, училища, ВУЗы и другие образовательные учреждения.
-					.hero_top_btn
+					.hero_top_btn.trigger(data-target="form")
 						button(type="button") Оставить заявку
 				.hero_bottom 
 					ul 
@@ -18,7 +18,7 @@ block content_block
 							.bottom_img 
 								img(src="i/icons/clock.png", alt="")
 							.bottom_txt 
-								p 5 лет на рынке
+								p Более 5 лет на рынке
 						li 
 							.bottom_img 
 								img(src="i/icons/bag.png", alt="")
@@ -28,7 +28,7 @@ block content_block
 							.bottom_img 
 								img(src="i/icons/file.png", alt="")
 							.bottom_txt 
-								p Сбор КП для аукциона и подготовка ТЗ
+								p Напишем грамотное ТЗ по 44 и 223 ФЗ
 						li 
 							.bottom_img 
 								img(src="i/icons/human.png", alt="")
@@ -82,7 +82,7 @@ block content_block
 								h3 Прямые поставки из Китая
 								p За счет прямых поставок из Китая, мы предоставляем выгодные условия.
 						li 
-							.services_btn 
+							.services_btn.trigger(data-target="form") 
 								button(type="button")
 									h3 Оставьте заявку
 									p Мы свяжемся с вами в ближайшее время и обсудим детали
@@ -92,19 +92,19 @@ block content_block
 			.project_head 
 				h2 Наши проекты
 				.project_slider_nav 
-						.project_slider_btn_prewios 
-							button(type="button")
-								img(src="i/icons/arrowprewios.png", alt="")
-						.project_slider_btn_next 
-							button(type="button")
-								img(src="i/icons/arrownext.png", alt="")
+					.project_slider_btn_prewios 
+						button(type="button")
+							+icon('previous')
+					.project_slider_btn_next 
+						button(type="button")
+							+icon('next')
 			.project_slider_w
 				.project_slider.swiper 
 					.swiper-wrapper
 						-for(i = 0; i < 15; i++)
 							.swiper-slide 
 								.project_slide
-									a(href="i/project/project1.png")
+									a(href="i/project/project1.png" data-fancybox="project_img")
 										img(src="i/project/project1.png", alt="")
 									.project_slide_txt 
 										h3 Название проекта
@@ -120,7 +120,7 @@ block content_block
 						p Наша компания специализируется на оснащении детских садов, школ, ВУЗов и объектов социально - культурного, спортивно-оздоровительного и общего назначения. 
 						p Работая по всей территории страны, мы обеспечиваем поставку технологического оборудования, специализированной мебели, технического инвентаря, расходного материала. 
 						p Исполнено более 80 государственных контрактов по всей стране.
-					.company_right_btn 
+					.company_right_btn.trigger(data-target="form") 
 						button(type="button") Оставить заявку
 	section.connection
 		.section_in
@@ -156,7 +156,7 @@ block content_block
 							li
 								.connection_form_input
 									input(type="tel" placeholder="Ваш телефон")
-						.connection_form_input
+						.connection_form_input_message
 							input(type="text" placeholder="Ваше сообщение")
 						ul 
 							li
@@ -168,4 +168,3 @@ block content_block
 
 
 
-	

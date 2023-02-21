@@ -3,10 +3,44 @@
 .section_in {
 }
 .footer_main {
+	margin: 2.5rem 0 2.6rem 0;
+	ul {display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	li {
+		display: flex;
+	}
+	@include bp($point_2) {
+		margin: 1.5rem 0 1.6rem 0;
+	}
+	@include bp($point_5) {
+		text-align: center;
+		ul {
+			flex-direction: column;
+		}
+		li {
+			flex-direction: column;
+		}
+	}
 }
 .footer_protect {
+	margin-right: 6.9rem;
+	@include bp($point_2) {
+		font-size: 1.2rem;
+		margin-right: 4rem;
+	}
+	@include bp($point_5) {
+		margin: 0 0 1rem 0;
+	}
 }
 .footer_policy {
+	@include bp($point_2) {
+		font-size: 1.2rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
 }
 .footer_arkada {
 }

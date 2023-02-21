@@ -16,35 +16,78 @@
 .hero_main_w {
 }
 .hero_top {
+	@include bp($point_2) {
+		text-align: center;
+	}
 }
 .hero_txt {
 	padding-top: 15.9rem;
 	margin-bottom: 6rem;
+	@include bp($point_2) {
+		padding-top: 3rem;
+		margin-bottom: 3rem;
+	}
 	h1 {
 		margin-bottom: 3rem;
 		max-width: 78rem;
+		@include bp($point_2) {
+			font-size: 3rem;
+			margin-bottom: 1.5rem;
+		}
+		@include bp($point_5) {
+			font-size: 1.6rem;
+		}
 	}
 	p {
 		max-width: 65rem;
 		color: rgba(255, 255, 255, 0.7);
-		font-size: 2.1rem;
+		font-size: 2rem;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+		}
+		@include bp($point_5) {
+			font-size: 1.2rem;
+		}
 	}
 }
 .hero_top_btn {
 	margin-bottom: 18.4rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
 	button {
 		padding: 2.5rem 7.5rem;
 		background: $blue;
 		border-radius: 5rem;
 		color: $white;
+		&:hover {
+			background: $light-blue;
+		}
+		@include bp($point_2) {
+			padding: 1.5rem 2.5rem;
+			font-size: 1.6rem;
+		}
+		@include bp($point_5) {
+		font-size: 1rem;
+		}
 	}
 }
 .hero_bottom {
 	padding-bottom: 7rem;
+	@include bp($point_2) {
+		padding-bottom: 4rem;
+	}
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
 		grid-gap: 4rem .1rem;
+		@include bp($point_2) {
+			grid-gap: 1.5rem .1rem;
+		}
+		@include bp($point_5) {
+			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+			grid-gap: 1.8rem .1rem;
+		}
 	}
 	li {
 		display: flex;
@@ -53,28 +96,62 @@
 	}
 }
 .bottom_img {
+	width: 4.5rem;
+	height: 4.5rem;
 	margin-right: 2rem;
+	@include bp($point_2) {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1.5rem;
+	}
 }
 .bottom_txt {
+	@include bp($point_2) {
+		font-size: 1rem;
+	}
 }
 .services {
 }
 .services_main {
 	margin: 18rem 0;
+	@include bp($point_2) {
+		margin: 6rem 0;
+		text-align: center;
+	}
+	@include bp($point_5) {
+		margin: 3rem 0;
+	}
 }
 .services_head {
 	margin-bottom: 6rem;
 	font-family: $font_2;
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+		h2 {
+			font-size: 2rem;
+		}
+	}
 }
 .services_info {
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
 		grid-gap: 8rem 3rem;
+		@include bp($point_2) {
+			grid-template-columns: repeat(auto-fill, minmax(39%, 1fr));
+			grid-gap: 2rem 2rem;
+		}
+		@include bp($point_5) {
+			grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+			grid-gap: 1rem 2rem;
+		}
 	}
 }
 .services_info_img {
 	margin-bottom: 2rem;
+	@include bp($point_5) {
+		margin-bottom: 1rem;
+	}
 }
 .services_info_txt {
 	h3 {
@@ -86,11 +163,30 @@
 		color: rgba(35, 35, 35, 0.7);
 		max-width: 36rem;
 	}
+	@include bp($point_2) {
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 1.4rem;
+		}
+	}
+	@include bp($point_5) {
+		h3 {
+			font-size: 1.3rem;
+			margin-bottom: .5rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
 }
+	
 .services_btn {
 	button {
 		padding: 3rem 6rem 4rem 3rem;
-		border-radius: 1rem;
+		border-radius: .8rem;
 		display: flex;
 		flex-direction: column;
 		h3 {
@@ -108,11 +204,38 @@
 		}
 		background: $dark;
 		color: $white;
+		&:hover {
+			background: $blue;
+		}
+		@include bp($point_2) {
+			padding: 2rem 0 3.2rem 2rem;
+			h3 {
+				font-size: 1.5rem;
+			}
+			p {
+				margin-bottom: 1.7rem;
+				font-size: 1.4rem;
+			}
+			img {
+				width: 1.6rem;
+			}
+		}
+		@include bp($point_5) {
+			h3 {
+				font-size: 1.3rem;
+			}
+			p {
+				font-size: 1rem;
+			}
+		}
 	}
 }
 .project {
 	margin-bottom: 30rem;
 	position: relative;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
 	&:before {
 		content: '';
 		position: absolute;
@@ -123,6 +246,12 @@
 		background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 		z-index: 2;
 		opacity: .9;
+		@include bp($point_2) {
+			width: 10rem;
+		}
+		@include bp($point_5) {
+			display: none;
+		}
 	}
 }
 .project_head {
@@ -130,19 +259,42 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 6rem;
+	@include bp($point_2) {
+		justify-content: center;
+		margin-bottom: 3rem;
+	}
+	@include bp($point_5) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
 }
 .project_slider_nav {
+	@include bp($point_2) {
+		display: none;
+	}
 	display: flex;
 }
 .project_slider_btn_prewios {
 	margin-right: 9rem;
+	button {
+		color: $blue;
+	}
 }
 .project_slider_btn_next {
+	button {
+		color: $blue;
+	}
 }
 .project_slider_w {
 }
 .project_slider {
 	overflow: initial !important;
+}
+.swiper-button-disabled {
+	button {
+		color: rgba(35, 35, 35) !important;
+	}
 }
 .swiper {
 }
@@ -153,6 +305,9 @@
 .project_slide {
 	img {
 		margin-bottom: 2rem;
+		@include bp($point_2) {
+			margin-bottom: 1rem;
+		}
 	}
 }
 .project_slide_txt {
@@ -163,6 +318,16 @@
 	p {
 		color: rgba(35, 35, 35, 0.7);
 		font-size: 1.53rem;
+	}
+	@include bp($point_2) {
+		text-align: center;
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 1rem;
+		}
 	}
 }
 .company {
@@ -181,6 +346,9 @@
 .company_main {
 	display: flex;
 	padding-bottom: 18rem;
+	@include bp($point_2) {
+		padding-bottom: 6rem;
+	}
 }
 .company_left {
 	margin-right: 7rem;
@@ -188,15 +356,37 @@
 		margin-top: - 12.1rem;
 		width: 53rem;
 	}
+	@include bp($point_2) {
+		display: none;
+	}
+}
+.company_right {
+	text-align: center;
 }
 .company_right_txt {
 	max-width: 64rem;
 	margin-bottom: 6rem;
+	text-align: left;
 	h2 {
 		margin: 7rem 0 3rem 0;
 	}
 	p {
 		margin-bottom: 1rem;
+	}
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+		h2 {
+			font-size: 2rem;
+			margin: 3rem 0 2rem 0;
+		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
+	@include bp($point_5) {
+		p {
+			font-size: 1rem;
+		}
 	}
 }
 .company_right_btn {
@@ -205,6 +395,17 @@
 		background: $blue;
 		border-radius: 5rem;
 		color: $white;
+		&:hover {
+			background: $light-blue;
+		}
+		@include bp($point_2) {
+			padding: 1.5rem 2.5rem;
+			font-size: 1.4rem;
+		}
+		@include bp($point_5) {
+			padding: 1rem 2rem;
+			font-size: 1rem;
+		}
 	}
 }
 .connection {
@@ -212,12 +413,23 @@
 }
 .connection_main {
 	display: flex;
+	justify-content: space-between;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .connection_left {
-	margin-top: 14rem;
+	margin: 14rem 0 0 0;
+	@include bp($point_2) {
+		margin: 3rem 0 ;
+	}
 }
 .connection_left_txt {
 	margin-bottom: 6rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
 	h2 {
 		color: $white;
 		margin-bottom: 1.5rem;
@@ -226,11 +438,38 @@
 		color: rgba(255, 255, 255, 0.7);
 		max-width: 40rem;
 	}
+	@include bp($point_2) {
+		text-align: center;
+		h2 {
+			font-size: 1.8rem;
+		}
+		p {
+			font-size: 1.3rem;
+		}
+	}
+	@include bp($point_5) {
+		h2 {
+			font-size: 1.5rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 .connection_left_info {
-	margin-right: 12.5rem;
 	ul {
 		display: flex;
+		margin-bottom: 6rem;
+		@include bp($point_2) {
+			margin-bottom: 1rem;
+		}
+	}
+	@include bp($point_2) {
+		ul {
+			flex-direction: column;
+			margin: 0;
+			align-items: center;
+		}
 	}
 }
 .connection_phone {
@@ -239,37 +478,151 @@
 		display: flex;
 		color: $white;
 	}
+	@include bp($point_2) {
+		margin: 0 0 1rem 0;
+		p {
+			font-size: 1.2rem;
+		}
+	}
 }
 .connection_phone_icon {
 	width: 1.5rem;
 	margin-right: 1.5rem;
+	@include bp($point_2) {
+		width: 1rem;
+	}
 }
 .connection_mail {
 	a {
 		display: flex;
 		color: $white;
 	}
+	@include bp($point_2) {
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+	}
 }
 .connection_mail_icon {
 	width: 2.3rem;
 	margin-right: 1.5rem;
+	@include bp($point_2) {
+		width: 1.3rem;
+	}
 }
 .connection_addres {
 		display: flex;
 		color: $white;
+		@include bp($point_2) {
+			font-size: 1.2rem;
+			justify-content: center;
+		}
 }
 .connection_addres_icon {
 	width: 1.8rem;
 	margin-right: 1.5rem;
+	@include bp($point_2) {
+		width: 1.2rem;
+	}
 }
 .connection_right {
-	margin-top: 15.9rem;
+	margin: 15.9rem 0 14rem 0;
+	@include bp($point_2) {
+		margin: 0 0 6rem 0;
+	}
+	@include bp($point_5) {
+		display: none;
+	}
 }
 .connection_form {
+	ul {
+		display: flex;
+		align-items: center;
+		max-width: 71rem;
+	}
+	li {
+		 &:not(:last-child) {
+			margin-right: 1.5rem;
+			@include bp($point_2) {
+					margin: 0;
+		 		}
+		 }
+ 	}
+	 @include bp($point_2) {
+		ul {
+			flex-direction: column;
+		}
+	}
+	@include bp($point_2) {
+		li {
+			margin: 0;
+		}
+	}
 }
 .connection_form_input {
+	margin-bottom: 1.5rem;
+	input {
+		@include app;
+		width: 100%;  
+		border-radius: 1rem;
+		font-size: 2rem;
+		padding: 2.5rem 8rem 2.5rem 2rem;
+		background: $white;
+	}
+	@include bp($point_2) {
+		input {
+			padding: 1rem 1.5rem;
+			font-size: 1.4rem;
+		}
+	}
+}
+.connection_form_input_message {
+	margin-bottom: 3rem;
+	input {
+		@include app;
+		padding: 2rem 0 17.6rem 2rem;
+		width: 100%;
+		max-height: 21rem;
+		height: 100%;
+		border-radius: 1rem;
+		background: $white;
+	} 
+	@include bp($point_2) {
+		text-align: center;
+		input {
+			padding: 1rem 1.5rem;
+			font-size: 1.4rem;
+			width: 50%;
+			height: 25%;
+		}
+	}
 }
 .connection_form_btn {
+	button {
+		padding: 2.5rem 7.5rem;
+		background: $blue;
+		border-radius: 5rem;
+		color: $white;
+		&:hover {
+			background: $light-blue;
+		}
+	}
+	@include bp($point_2) {
+		button {
+			padding: 1.5rem 4.5rem;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+	}
 }
 .connection_policy {
+	font-family: $font_1;
+	color: $white;
+	max-width: 41rem;
+	a {
+		color: $white;
+	}
+	@include bp($point_2) {
+		font-size: 1.2rem;
+
+	}
 }
